@@ -7,8 +7,9 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   container: {
-    width: '100px',
-    align: 'center'
+    width: 100,
+    align: 'center',
+    height: 130
   },
   avatar: {
     width:70,
@@ -34,7 +35,7 @@ function Player(props) {
   const { classes } = props;
   return(
     <Fragment className={classes.container}>
-      <Grid container className={classes.container} justify="center">
+      <Grid container className={classes.container} justify="center" alignItems="center">
         <b>Player</b>
         <Avatar src="https://material-ui.com/static/images/avatar/1.jpg" className={classes.avatar}/>
         <div className={classes.money}>$1000</div>

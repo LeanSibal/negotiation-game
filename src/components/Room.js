@@ -28,13 +28,13 @@ function Room(props) {
         <Grid item xs={3}/>
       </Grid>
       <Grid container spacing={40}>
-        <Grid item xs={3} className={ classes.player } justify="flex-end">
+        <Grid item xs={3} className={ classes.player } justify="flex-end" alignItems="center">
           <Player/>
         </Grid>
         <Grid item xs={6}>
           <Table />
         </Grid>
-        <Grid item xs={3} className={ classes.player } justify="flex-start">
+        <Grid item xs={3} className={ classes.player } justify="flex-start" alignItems="center">
           <Player/>
         </Grid>
       </Grid>

@@ -5,9 +5,10 @@ import Action from './Action';
 
 const styles = theme => ({
   table: {
-    borderRadius: 30,
+    borderRadius: 60,
     border: '5px solid green',
-    padding: 20
+    padding: 20,
+    direction: 'row'
   }
 });
 
@@ -17,8 +18,22 @@ function Table(props) {
   } = props;
   return (
     <Fragment>
-      <Grid container className={ classes.table } justify="center">
-        <Action/>
+      <Grid container className={ classes.table } justify="center" direction="row">
+        <Grid item>
+          <Action/>
+        </Grid>
+        <Grid item>
+          <Action/>
+        </Grid>
+        <Grid item>
+          <Action/>
+        </Grid>
+        <Grid item>
+          <Action/>
+        </Grid>
+        <Grid item>
+          <Action/>
+        </Grid>
       </Grid>
     </Fragment>
   );
