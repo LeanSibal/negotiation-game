@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -19,7 +19,7 @@ const styles = theme => ({
     //border: '1px dashed white',
     boxShadow: '0px 0px 20px 5px #44444421',
     margin:10,
-    background: 'green',
+    background: '#038868',
     color: 'white',
     fontWeight: 500
   },
@@ -35,13 +35,13 @@ function Action(props) {
     classes
   } = props;
   return (
-    <Fragment className={ classes.action }>
+    <div className={ classes.action }>
       <p className={ classes.name }>Eric</p>
       <Grid container className={ classes.card } alignItems="center" justify="center">
         G
       </Grid>
       <p className={ classes.caption}>Take</p>
-    </Fragment>
+    </div>
   );
 }
 

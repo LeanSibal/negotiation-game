@@ -1,6 +1,4 @@
-import React,{
-  Fragment
-} from 'react';
+import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import { withStyles } from '@material-ui/core/styles';
@@ -9,7 +7,8 @@ const styles = theme => ({
   container: {
     width: 100,
     align: 'center',
-    height: 130
+    height: 130,
+    margin: 10
   },
   avatar: {
     width:70,
@@ -34,13 +33,11 @@ const styles = theme => ({
 function Player(props) {
   const { classes } = props;
   return(
-    <Fragment className={classes.container}>
-      <Grid container className={classes.container} justify="center" alignItems="center">
-        <b>Player</b>
-        <Avatar src="https://material-ui.com/static/images/avatar/1.jpg" className={classes.avatar}/>
-        <div className={classes.money}>$1000</div>
-      </Grid>
-    </Fragment>
+    <Grid container item className={classes.container} justify="center" alignItems="center">
+      <b>Player</b>
+      <Avatar src="https://material-ui.com/static/images/avatar/1.jpg" className={classes.avatar}/>
+      <div className={classes.money}>$1000</div>
+    </Grid>
   );
 }
 
