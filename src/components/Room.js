@@ -3,6 +3,9 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Player from './Player';
 import Table from './Table';
+import Buttons from './Buttons';
+import ActionButtons from './ActionButtons';
+import ChatBox from './ChatBox';
 
 const styles = theme => ({
   topContainer: {
@@ -43,6 +46,17 @@ function Room(props) {
           <Player/>
         </Grid>
         <Grid item xs={3}/>
+      </Grid>
+      <Grid container justify="center">
+        <Grid item xs={4}>
+          <Buttons />
+        </Grid>
+        <Grid item xs={4}>
+          <ActionButtons />
+        </Grid>
+        <Grid item xs={4}>
+          <ChatBox />
+        </Grid>
       </Grid>
     </Fragment>
   );

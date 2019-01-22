@@ -8,6 +8,8 @@ import {
   createMuiTheme
 } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Timer from './Timer';
 import Room from './Room';
 import logo from '../assets/images/logo.png';
 
@@ -47,7 +49,17 @@ class App extends Component {
         <MuiThemeProvider theme={theme}>
           <AppBar position="static" className={ classes.appbar }>
             <Toolbar>
-              <img src={logo} alt="Logo" className={ classes.logo }/>
+              <Grid container>
+                <Grid item container xs={3} justify="flex-start">
+                  <img src={logo} alt="Logo" className={ classes.logo }/>
+                </Grid>
+                <Grid item container xs={6} justify="center">
+                  <Timer />
+                </Grid>
+                <Grid item container xs={3} justify="flex-end">
+                  b
+                </Grid>
+              </Grid>
             </Toolbar>
           </AppBar>
           <Room />
