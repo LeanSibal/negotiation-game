@@ -11,6 +11,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Timer from './Timer';
 import Room from './Room';
+import Score from './Score';
 import logo from '../assets/images/logo.png';
 
 const theme = createMuiTheme({
@@ -57,7 +58,7 @@ class App extends Component {
                   <Timer />
                 </Grid>
                 <Grid item container xs={3} justify="flex-end">
-                  b
+                  <Score />
                 </Grid>
               </Grid>
             </Toolbar>
