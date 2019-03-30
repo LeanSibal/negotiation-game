@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+  negotiation-game:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: negotiation-game
+    working_dir: /code
+    volumes:
+      - .:/code
+      - /code/node_modules
+    ports:
+      - 8001:80
+      - 3001:3000
+      - 9001:9000
