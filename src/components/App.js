@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom'
 import Index from './Index'
 import Lobby from './Lobby'
+import PreGame from './PreGame'
 import Game from './Game'
 
 const theme = createMuiTheme({
@@ -38,6 +39,7 @@ class App extends Component {
         <BrowserRouter>
           <Route path="/" exact component={Index} />
           <Route path="/lobby" exact component={Lobby} />
+          <Route path="/pregame" exact component={PreGame} />
           <Route path="/game" exact component={Game} />
         </BrowserRouter>
       </MuiThemeProvider>
