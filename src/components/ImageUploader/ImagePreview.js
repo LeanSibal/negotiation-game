@@ -8,8 +8,8 @@ import Grid from '@material-ui/core/Grid'
 
 const styles = theme => ({
   deleteButton: {
-    marginTop: 20,
-    marginLeft: -75,
+    marginTop: 10,
+    marginLeft: 75,
     marginBottom: -20,
     zIndex: 2
   },
