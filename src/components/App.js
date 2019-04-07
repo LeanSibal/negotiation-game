@@ -1,23 +1,23 @@
-import React, { 
-  Component 
-} from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import React, { Component } from 'react'
 import { 
   MuiThemeProvider,
-  createMuiTheme
-} from '@material-ui/core/styles';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Timer from './Timer';
-import Room from './Room';
-import Score from './Score';
-import logo from '../assets/images/logo.png';
+  createMuiTheme,
+  withStyles
+} from '@material-ui/core/styles'
+import {
+  BrowserRouter,
+  Route
+} from 'react-router-dom'
+import Index from './Index'
+import Game from './Game'
 
 const theme = createMuiTheme({
   palette: {
     primary: {
       main: '#038868'
+    },
+    secondary: {
+      main: '#F5A534'
     }
   },
   typography: {
@@ -25,49 +25,22 @@ const theme = createMuiTheme({
     fontSize: 15,
     fontFamily: '"Roboto", sans-serif'
   }
-});
+})
 
 const styles = theme => ({
-  root: {
-    background: '#f6f6f6'
-  },
-  appbar: {
-    padding:10
-  },
-  logo: {
-    width:65,
-    height:65
-  }
-});
+})
 
 class App extends Component {
   render() {
-    const {
-      classes
-    } = this.props;
-    return (
-      <div className={ classes.root} >
-        <MuiThemeProvider theme={theme}>
-          <AppBar position="static" className={ classes.appbar }>
-            <Toolbar>
-              <Grid container>
-                <Grid item container xs={3} justify="flex-start">
-                  <img src={logo} alt="Logo" className={ classes.logo }/>
-                </Grid>
-                <Grid item container xs={6} justify="center">
-                  <Timer />
-                </Grid>
-                <Grid item container xs={3} justify="flex-end">
-                  <Score />
-                </Grid>
-              </Grid>
-            </Toolbar>
-          </AppBar>
-          <Room />
-        </MuiThemeProvider>
-      </div>
-    );
+    return(
+      <MuiThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Route path="/" exact component={Index} />
+          <Route path="/game" exact component={Game} />
+        </BrowserRouter>
+      </MuiThemeProvider>
+    )
   }
-};
+}
 
-export default withStyles( styles, { withTheme: true } )( App );
+export default withStyles( styles, { withTheme: true } )( App )
