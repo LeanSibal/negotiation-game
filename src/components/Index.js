@@ -39,7 +39,7 @@ const styles = theme => ({
 
 class Index extends Component {
   next = () => {
-    this.props.history.push('/game')
+    this.props.history.push('/lobby')
   }
   render() {
     const {
@@ -48,7 +48,7 @@ class Index extends Component {
     return(
       <Grid container direction='column' alignItems='center' className={ classes.container }>
         <img src={logo} alt="Logo" className={ classes.logo }/>
-        <h1 className={ classes.header }>Setup your Profile</h1>
+        <h1 className={ classes.header }>Create your Profile</h1>
         <ImageUploader />
 
         <InputLabel htmlFor="player-name" className={ classes.label }>Full Name</InputLabel>
