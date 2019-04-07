@@ -34,7 +34,7 @@ const styles = theme => ({
     maxHeight: 350,
     backgroundColor: 'white',
     overflowX: 'hidden',
-    overflowY: 'scroll'
+    overflowY: 'auto'
   },
   buttonsContainer: {
     marginTop: 50
@@ -51,10 +51,10 @@ const styles = theme => ({
 
 class Lobby extends Component {
   createGame = () => {
-    this.props.history.push('/game')
+    this.props.history.push('/pregame')
   }
   joinGame = () => {
-    this.props.history.push('/game')
+    this.props.history.push('/pregame')
   }
   render(){
     const {
