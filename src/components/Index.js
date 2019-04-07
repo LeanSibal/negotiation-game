@@ -24,16 +24,21 @@ const styles = theme => ({
     height: 150,
     marginTop: 100
   },
+  label: {
+    color: 'white',
+    marginTop: 30
+  },
   fullNameInput: {
-    textAlign: 'center'
+    textAlign: 'center',
+    marginTop: 10,
+    padding: 10,
+    minWidth: 350,
+    background: 'white'
   },
   nextButton: {
     minWidth: 250,
     marginTop: 50
   },
-  label: {
-    color: 'white'
-  }
 })
 
 
@@ -49,10 +54,10 @@ class Index extends Component {
       <Grid container direction='column' alignItems='center' className={ classes.container }>
         <img src={logo} alt="Logo" className={ classes.logo }/>
         <h1 className={ classes.header }>Create your Profile</h1>
-        <ImageUploader />
-
         <InputLabel htmlFor="player-name" className={ classes.label }>Full Name</InputLabel>
         <Input id='player-name' classes={{ input: classes.fullNameInput }} /> 
+
+        <ImageUploader />
 
         <Fab onClick={ this.next } color='secondary' size='large' variant='extended' className={ classes.nextButton }>
           Next

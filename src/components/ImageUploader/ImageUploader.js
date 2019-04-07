@@ -8,8 +8,8 @@ import Button from './Button'
 
 const styles = theme => ({
   container: {
-    marginTop: 50,
-    marginBottom: 30
+    marginTop: 40,
+    marginBottom: 10
   },
   label: {
     color: 'white'
