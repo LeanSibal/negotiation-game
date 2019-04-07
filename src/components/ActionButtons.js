@@ -22,6 +22,9 @@ const styles = theme => ({
     fontWeight: 700,
     color: 'white'
   },
+  giveCard: {
+    background: '#f5a543'
+  },
   doneBtn: {
     minWidth: 250,
     marginTop: 20
@@ -42,7 +45,7 @@ class ActionButtons extends Component {
             </div>
           </Grid>
           <Grid container item xs={6} justify="flex-start">
-            <div className={ classes.card }>
+            <div className={ [ classes.card, classes.giveCard ].join(' ') }>
               <span>G</span>
             </div>
           </Grid>
