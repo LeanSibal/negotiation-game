@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
+import MoveHistory from './MoveHistory'
 import LeaderBoard from './LeaderBoard'
 
 const styles = theme => ({
@@ -29,18 +30,31 @@ const styles = theme => ({
 });
 class Buttons extends Component {
   state = {
-    open: true
+    leaderBoardOpen: false,
+    moveHistoryOpen: true
   }
 
-  handleClickOpen = () => {
+  handleOpenLeaderBoard = () => {
     this.setState({
-      open: true
+      leaderBoardOpen: true
     })
   }
 
-  handleClose = () => {
+  handleCloseLeaderBoard = () => {
     this.setState({
-      open: false
+      leaderBoardOpen: false
+    })
+  }
+
+  handleOpenMoveHistory = () => {
+    this.setState({
+      moveHistoryOpen: true
+    })
+  }
+
+  handleCloseMoveHistory = () => {
+    this.setState({
+      moveHistoryOpen: false
     })
   }
 
@@ -49,7 +63,8 @@ class Buttons extends Component {
       classes,
     } = this.props;
     const {
-      open
+      leaderBoardOpen,
+      moveHistoryOpen
     } = this.state;
     return(
       <Grid container>
@@ -59,13 +74,13 @@ class Buttons extends Component {
           </div>
           <p className={ classes.label }>How to Play</p>
         </Grid>
-        <Grid container item xs={3} direction="column" justify="flex-start" alignItems="center">
+        <Grid container item xs={3} direction="column" justify="flex-start" alignItems="center" onClick={ this.handleOpenMoveHistory }>
           <div className={ classes.box }>
             <Icon className={ classes.icon }>cached</Icon>
           </div>
           <p className={ classes.label }>Move History</p>
         </Grid>
-        <Grid container item xs={3} direction="column" justify="flex-start" alignItems="center" onClick={ this.handleClickOpen }>
+        <Grid container item xs={3} direction="column" justify="flex-start" alignItems="center" onClick={ this.handleOpenLeaderBoard }>
           <div className={ classes.box }>
             <Icon className={ classes.icon }>star</Icon>
           </div>
@@ -77,9 +92,13 @@ class Buttons extends Component {
           </div>
           <p className={ classes.label }>Settings</p>
         </Grid>
+        <MoveHistory
+          open={ moveHistoryOpen }
+          onClose={ this.handleCloseMoveHistory }
+        />
         <LeaderBoard
-          open={ open }
-          onClose={ this.handleClose }
+          open={ leaderBoardOpen }
+          onClose={ this.handleCloseLeaderBoard }
         />
       </Grid>
     );
