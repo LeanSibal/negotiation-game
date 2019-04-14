@@ -40,6 +40,7 @@ class ImagePreview extends Component {
         </div>
         <div className={ classes.imageContainer }>
           <img
+            alt="Profile"
             src={ URL.createObjectURL( image ) }
             className={ classes.image }
           />

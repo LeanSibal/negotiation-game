@@ -57,7 +57,6 @@ class ChatBox extends Component {
                 <TextField 
                   className={ classes.chatMessage } 
                   placeholder="Your chat message here..." 
-                  labelClassName={ this.props.classes.inputLabel }
                   InputProps={{ disableUnderline:true, className: classes.input  }}/>
                 <Fab color="primary" size="small" className={ classes.sendButton }>
                   <Icon className={ classes.sendIcon } color="primary">

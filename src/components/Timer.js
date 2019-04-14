@@ -50,7 +50,6 @@ class Timer extends Component {
   setTimers() {
     const {
       seconds,
-      percent,
       counter
     } = this.state;
     const remaining = seconds - counter;
@@ -69,9 +68,7 @@ class Timer extends Component {
 
   progress = () => {
     const {
-      seconds,
-      percent,
-      counter
+      percent
     } = this.state;
 
     if( percent === 0 ) {

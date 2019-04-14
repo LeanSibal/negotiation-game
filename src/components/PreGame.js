@@ -90,20 +90,20 @@ class PreGame extends Component {
         <List className={ classes.list }>
           <ListItem className={ classes.listItem }>
             <Avatar className={ classes.avatar }>
-              <img src='https://material-ui.com/static/images/avatar/1.jpg' className={ classes.playerImage }/>
+              <img src='https://material-ui.com/static/images/avatar/1.jpg' alt="Avatar" className={ classes.playerImage }/>
             </Avatar>
             <ListItemText primary="John Doe"/>
           </ListItem>
           <ListItem className={ classes.listItem }>
             <Avatar className={ classes.avatar }>
-              <img src='https://material-ui.com/static/images/avatar/2.jpg' className={ classes.playerImage }/>
+              <img src='https://material-ui.com/static/images/avatar/2.jpg' alt="Avatar" className={ classes.playerImage }/>
             </Avatar>
             <ListItemText primary="John Smith"/>
             <Delete/>
           </ListItem>
           <ListItem className={ classes.listItem }>
             <Avatar className={ classes.avatar }>
-              <img src='https://material-ui.com/static/images/avatar/3.jpg' className={ classes.playerImage }/>
+              <img src='https://material-ui.com/static/images/avatar/3.jpg' alt="Avatar" className={ classes.playerImage }/>
             </Avatar>
             <ListItemText primary="Jane Doe"/>
             <Delete/>

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {
   withStyles
 } from '@material-ui/core/styles'
-import FormControl from '@material-ui/core/FormControl'
 import Input from '@material-ui/core/Input'
 import InputLabel from '@material-ui/core/InputLabel'
 import Grid from '@material-ui/core/Grid'
