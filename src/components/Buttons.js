@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
+import LeaderBoard from './LeaderBoard'
 
 const styles = theme => ({
   icon: {
@@ -27,10 +28,29 @@ const styles = theme => ({
   }
 });
 class Buttons extends Component {
+  state = {
+    open: true
+  }
+
+  handleClickOpen = () => {
+    this.setState({
+      open: true
+    })
+  }
+
+  handleClose = () => {
+    this.setState({
+      open: false
+    })
+  }
+
   render() {
     const {
-      classes
+      classes,
     } = this.props;
+    const {
+      open
+    } = this.state;
     return(
       <Grid container>
         <Grid container item xs={3} direction="column" justify="flex-start" alignItems="center">
@@ -45,7 +65,7 @@ class Buttons extends Component {
           </div>
           <p className={ classes.label }>Move History</p>
         </Grid>
-        <Grid container item xs={3} direction="column" justify="flex-start" alignItems="center">
+        <Grid container item xs={3} direction="column" justify="flex-start" alignItems="center" onClick={ this.handleClickOpen }>
           <div className={ classes.box }>
             <Icon className={ classes.icon }>star</Icon>
           </div>
@@ -57,6 +77,10 @@ class Buttons extends Component {
           </div>
           <p className={ classes.label }>Settings</p>
         </Grid>
+        <LeaderBoard
+          open={ open }
+          onClose={ this.handleClose }
+        />
       </Grid>
     );
   }
