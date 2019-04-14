@@ -31,7 +31,7 @@ const styles = theme => ({
 class Buttons extends Component {
   state = {
     leaderBoardOpen: false,
-    moveHistoryOpen: true
+    moveHistoryOpen: false
   }
 
   handleOpenLeaderBoard = () => {
